@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ExaCoin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
       color: white;
       text-align: center;
@@ -32,8 +31,8 @@
       color: #bbb;
       font-weight: normal;
     }
-    .info {
-      max-width: 700px;
+    .info, .pitch {
+      max-width: 800px;
       margin: 40px auto;
       font-size: 1.2em;
       line-height: 1.8em;
@@ -66,20 +65,49 @@
       color: cyan;
       text-decoration: none;
     }
+    .pitch {
+      padding: 20px;
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid cyan;
+      border-radius: 12px;
+    }
+    .pitch h2 {
+      color: cyan;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="image.png" alt="ExaCoin Logo">
     <h1>ExaCoin (EXA)</h1>
-    <h2>Framtiden är spekulation. Varken mer eller mindre.</h2>
+    <h2>The future is speculation. Nothing more. Nothing less.</h2>
   </header>
-  
+
   <div class="info">
-    <p><span class="highlight">100 000 000 EXA</span> skapades. Aldrig mer.</p>
-    <p><span class="highlight">2% bränns</span> automatiskt vid varje transaktion. Coins blir färre, värdet pressas upp.</p>
-    <p>Ingen nytta. Ingen roadmap. Bara digital konst och hype.</p>
-    <p><strong>Skapad av:</strong> ExaFuture</p>
+    <p><span class="highlight">100,000,000 EXA</span> were created. No more. Ever.</p>
+    <p><span class="highlight">2% is burned</span> automatically on every transaction. Fewer coins. Higher value.</p>
+    <p>No utility. No roadmap. Just digital art and hype.</p>
+    <p><strong>Created by:</strong> ExaFuture</p>
+  </div>
+
+  <div class="pitch">
+    <h2>One coin. One moment. One chance.</h2>
+    <p>
+      ExaCoin isn't just another token. It's a digital phenomenon built for those who dare to think bigger.<br>
+      In a world where everyone is chasing utility, EXA stands out by simply being... value.
+    </p>
+    <p>
+      A speculative experiment. A blockchain art piece.
+    </p>
+    <p>
+      <strong>Only 100 million.</strong> No more. No less.<br>
+      <strong>2% disappears forever</strong> every time it moves.
+    </p>
+    <p style="margin-top: 2em; font-size: 1.3em;">
+      Don’t miss the moment. Hold. Buy. Burn. Speculate.
+    </p>
   </div>
 
   <div class="stats">
@@ -89,16 +117,15 @@
   </div>
 
   <footer>
-    <p><a href="#">Ladda ner whitepaper (PDF)</a></p>
+    <p><a href="#">Download whitepaper (PDF)</a></p>
     <p>&copy; 2025 ExaFuture</p>
   </footer>
 
   <script>
-    // Placeholder-räknare: simulera bränning över tid
     let initialSupply = 100000000;
     let burned = 0;
     setInterval(() => {
-      burned += Math.floor(Math.random() * 10); // simulera bränning
+      burned += Math.floor(Math.random() * 10);
       if (burned > initialSupply) burned = initialSupply;
       document.getElementById("burned").textContent = burned.toLocaleString();
       document.getElementById("circulating").textContent = (initialSupply - burned).toLocaleString();
